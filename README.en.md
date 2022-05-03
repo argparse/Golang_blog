@@ -2,7 +2,7 @@
 
 #### Description
 使用go语言做的个人markdown博客。
-预览地址：http://121.36.253.86/
+预览地址：http://xinyusi.website/
 
 #### Software Architecture
 Software architecture description
