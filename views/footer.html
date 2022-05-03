@@ -1,0 +1,46 @@
+{{define "footer"}} {{/* footer.html 它是页面的嵌入模板 */}}
+<footer>
+  <div class="footer-mid">
+    <div class="links">
+      <h2>友情链接</h2>
+      <ul>        
+        <li><a href="https://site-1526371-1848-6740.mystrikingly.com/">方舟子site</a></li>
+        <li><a href="https://lanzijianchaoxi.wixsite.com/website-1">成都公务员兰子鉴抄袭博士论文</a></li>
+      </ul>
+    </div>
+    <div class="visitors">
+      <h2>最新评论</h2>
+		{{range $i,$v := .newcmts}}
+		<dl>
+		  <dt><img src="/assets/images/s{{$i}}.jpg">
+		  <dt>
+		  <dd>{{$v.User}}
+			<time>{{$v.Times}}</time>
+		  </dd>
+		  <dd>在 <a href="/article/{{$v.ID}}" class="title">{{$v.Title}}</a>中评论：</dd>
+		  <dd>{{$v.Text}}</dd>
+		</dl>
+		{{end}}
+    </div>
+    <section class="flickr">
+      <h2>NFT作品</h2>
+      <ul>
+        <li><a href="/"><img src="/assets/images/01.jpg"></a></li>
+        <li><a href="/"><img src="/assets/images/02.jpg"></a></li>
+        <li><a href="/"><img src="/assets/images/03.jpg"></a></li>
+        <li><a href="/"><img src="/assets/images/04.jpg"></a></li>
+        <li><a href="/"><img src="/assets/images/05.jpg"></a></li>
+        <li><a href="/"><img src="/assets/images/06.jpg"></a></li>
+        <li><a href="/"><img src="/assets/images/07.jpg"></a></li>
+        <li><a href="/"><img src="/assets/images/08.jpg"></a></li>
+        <li><a href="/"><img src="/assets/images/09.jpg"></a></li>
+      </ul>
+    </section>
+  </div>
+  <div class="footer-bottom">
+    <p>访问:{{.vistcnt}} Copyright 2022 Design by <a href="https://argparse.github.io" target="_blank">方舟子 </a>Powerd by Golang GinWeb</p>
+  </div>
+</footer>
+<!-- jQuery仿腾讯回顶部和建议 代码开始 -->
+<div id="tbox"> <a id="togbook" href="https://github.com/argparse/lanzjian_gamble_evidence"></a> <a id="gotop" href="javascript:void(0)"></a> </div>
+{{end}} {{/*? {{ 嵌入模板定义格式：define "嵌入模板名称"}} {{end}}? */}}
